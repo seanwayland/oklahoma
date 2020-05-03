@@ -52,6 +52,8 @@ Sub Button117_Click()
 With ActiveSheet
 ' sets the last row variable to the last row in the first column
 lastRow = Cells(Rows.Count, 1).End(xlUp).Row
+
+' counts that there is the correct number of rows in the seet
 If (lastRow <> 720) Then
     MsgBox ("The last row is" & lastRow & "which should be row 720")
     Else: MsgBox ("number of Rows OK")
@@ -59,6 +61,7 @@ End If
 
 errorCount = 0
 
+' checks if there are any errors in the sheet
 Dim sheetRange As Range
 Set sheetRange = Range("A5:DL720")
     
