@@ -71,6 +71,7 @@ Set sheetRange = Range("A5:DL720")
         errorVal = IsError(cell.Value)
         If (errorVal = True) Then
             errorCount = errorCount + 1
+            MsgBox ("Error in cell: " & cell.Address)
          End If
 
         
